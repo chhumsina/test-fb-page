@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+    <title>Test</title>
+
+    <!-- Custom your style -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <link type="text/css" rel="stylesheet" href="css/jquery.ibacor-fb-streaming.css" />
+    <link type="text/css" rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/menu.css"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+
+    <!-- Include jQuery -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.ibacor-fb-streaming.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script>
+        $( document ).ready(function() {
+            $(".ibacor_popup").fancybox({
+                'width'  : '90%',
+                'height'  : '90%',
+                'autoScale'  : false,
+                'transitionIn'  : 'none',
+                'transitionOut'  : 'none',
+                'type'  : 'iframe'
+            });
+
+            // first loading
+            var frstPage = "ezeclips";
+           $(".ibacor_fb_streaming").html("<div class='title-page'><span class='title'>"+frstPage+"</span> <img class='img-page' src='http://graph.facebook.com/"+frstPage+"/picture' alt='"+frstPage+"' title='"+frstPage+"'/></div>");
+           ibacor_fb_streaming(
+            ibacor_fb_id = frstPage, // example your Groups_id or FansPage_id. Find your facebook_id in http://ibacor.com/media/sosmed-user-id-finder/
+            ibacor_fb_limit = 15, // max 25
+            ibacor_fb_token = 'ibacor.com_apps' // => Default using the access_token ibacor.com_apps OR you can change it using the access token that you have => example: ibacor_fb_token = '896774747546|62IEt1ttiNma_543fR5NAg8gNtRI' you can get it in https://developers.facebook.com/docs/apps
+            );
+
+
+
+           $(document).on('click', '.page li img', function() {
+           var page = $(this).attr('title');
+           $(".ibacor_fb_streaming").empty();
+
+           $(".ibacor_fb_streaming").html("<div class='title-page'><span class='title'>"+page+"</span> <img class='img-page' src='http://graph.facebook.com/"+page+"/picture' alt='"+page+"' title='"+page+"'/><div class='loader'>Loading...</div></div>");
+
+             $(".loader").delay(10000).hide(0, function() {
+              });
+
+
+            $( ".cd-nav-trigger" ).trigger( "click" );
+                ibacor_fb_streaming(
+                ibacor_fb_id = page, // example your Groups_id or FansPage_id. Find your facebook_id in http://ibacor.com/media/sosmed-user-id-finder/
+                ibacor_fb_limit = 15, // max 25
+                ibacor_fb_token = 'ibacor.com_apps' // => Default using the access_token ibacor.com_apps OR you can change it using the access token that you have => example: ibacor_fb_token = '896774747546|62IEt1ttiNma_543fR5NAg8gNtRI' you can get it in https://developers.facebook.com/docs/apps
+            );
+
+           });
+
+           });
+    </script>
+</head>
+
+<body>
+
+<a href="#cd-nav" class="cd-nav-trigger">Menu
+    <span class="cd-nav-icon"></span>
+
+    <svg x="0px" y="0px" width="54px" height="54px" viewBox="0 0 54 54">
+
+    </svg>
+</a>
+
+<div id="cd-nav" class="cd-nav">
+    <div class="cd-navigation-wrapper">
+         <div class="pageChoose">Choose your favourite page:</div>
+        <div class="bs-glyphicons">
+            <ul class="bs-glyphicons-list page">
+
+                <li>
+                    <img src="http://graph.facebook.com/TheLibraryOfLove.kh/picture?type=normal" alt="TheLibraryOfLove.kh" title="TheLibraryOfLove.kh"/>
+                    <span class="glyphicon-class">TheLibraryOfLove.kh</span>
+                </li>
+
+                <li>
+                    <img src="http://graph.facebook.com/168446286642835/picture?type=normal" alt="TheLibraryOfLove.kh" title="168446286642835"/>
+                    <span class="glyphicon-class">Khmer Troll & Memes</span>
+                </li>
+
+            </ul>
+        </div>
+    </div> <!-- .cd-navigation-wrapper -->
+</div> <!-- .cd-nav -->
+
+<div id="ibacor_fb_content">
+
+    <!-- Your facebook streaming -->
+    <div class="ibacor_fb_streaming">
+
+    </div>
+
+</div>
+
+</body>
+</html>

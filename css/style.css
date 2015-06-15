@@ -1,0 +1,191 @@
+.fancybox-skin {
+    background: none
+}
+.fancybox-opened .fancybox-skin {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none
+}
+
+.bs-glyphicons {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.bs-glyphicons-list {
+    list-style: outside none none;
+    padding-left: 0;
+}
+ol, ul {
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.bs-glyphicons li {
+    font-size: 12px;
+    width: 12.5%;
+}
+.bs-glyphicons li {
+    background-color: #f9f9f9;
+    border: 1px solid #fff;
+    float: left;
+    font-size: 10px;
+    height: 170px;
+    line-height: 1.4;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+}
+
+.bs-glyphicons li img {
+    width: 100%;
+    height: 92%;
+    margin-bottom: 5px;
+}
+
+.bs-glyphicons .glyphicon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.glyphicon {
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    position: relative;
+    top: 1px;
+}
+.bs-glyphicons .glyphicon-class {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.ibacor_btn_load_more a[target="_BLANK"] {
+    display: none;
+}
+
+.cd-dropdown ul li {
+    width: 100% !important;
+}
+
+.title-page {
+    border-bottom: 1px dashed #ccc;
+    font-weight: bold;
+    margin-bottom: 9px;
+    padding: 8px 8px 15px;
+}
+
+.img-page {
+    float: right;
+    height: 39px;
+    margin-right: -9px;
+    margin-top: -9px;
+}
+
+.cd-nav-trigger {
+top:90%;
+left: 83%;
+border-radius: 0;
+}
+
+.loading {
+bottom:35%;position:fixed;z-index:999;
+}
+
+div#ibacor_fb_content .ibacor_moregf {
+    background-color: #243040;
+    border-bottom-color: #25417b;
+    border-left-color: #243040;
+    border-radius: 0;
+    border-top-color: #243040;
+}
+
+.pageChoose {
+background: #f9f9f9 none repeat scroll 0 0;
+    font-weight: bold;
+    padding: 11px;
+    margin-bottom: -9px;
+}
+
+.title {
+color: #000 !important;
+}
+
+pre {
+    background-color: #f5f5f5;
+    border: 0px;
+    border-radius: 0;
+    color: #333;
+    display: block;
+    font-size: 13px;
+    line-height: 1.42857;
+    margin: 0 0 10px;
+    padding: 9px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+div#ibacor_fb_content pre {
+    font-family: Arial,Helvetica,sans-serif;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 5px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+div.ibacor_fb_box {
+    background: #fff none repeat scroll 0 0;
+    box-shadow: 0 0 3px #ccc;
+    margin-bottom: 20px;
+}
+
+div.ibacor_status {
+border-bottom: 0px;
+}
+
+.loader {
+  margin: 60px auto;
+  font-size: 10px;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 1.1em solid #ffffff;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load8 1.1s infinite linear;
+  animation: load8 1.1s infinite linear;
+}
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 10em;
+  height: 10em;
+}
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
