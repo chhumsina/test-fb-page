@@ -23,6 +23,22 @@
     <script src="js/jquery.fancybox.min.js"></script>
     <script>
         $( document ).ready(function() {
+
+            $.ajax({
+                url: 'http://localhost/SocialProject/api/pages',
+                type: 'GET',
+                contentType: "jsonp", // Pay attention to the dataType/contentType
+                dataType: 'jsonp', // Pay attention to the dataType/contentType
+                success: function (data) {
+                    $(data).each(function(index, item) {
+                        name = item.name;
+                        url = item.url;
+                        content = '<li><img src="http://graph.facebook.com/'+name+'/picture?type=normal" alt="'+name+'" title="'+name+'"/> <span class="glyphicon-class">'+name+'</span> </li>';
+                        $('.page').append(content);
+                    });
+                }
+            });
+
             $(".ibacor_popup").fancybox({
                 'width'  : '90%',
                 'height'  : '90%',
@@ -82,15 +98,6 @@
         <div class="bs-glyphicons">
             <ul class="bs-glyphicons-list page">
 
-                <li>
-                    <img src="http://graph.facebook.com/TheLibraryOfLove.kh/picture?type=normal" alt="TheLibraryOfLove.kh" title="TheLibraryOfLove.kh"/>
-                    <span class="glyphicon-class">TheLibraryOfLove.kh</span>
-                </li>
-
-                <li>
-                    <img src="http://graph.facebook.com/168446286642835/picture?type=normal" alt="TheLibraryOfLove.kh" title="168446286642835"/>
-                    <span class="glyphicon-class">Khmer Troll & Memes</span>
-                </li>
 
             </ul>
         </div>
